@@ -1,0 +1,8 @@
+# Stud.IP Developer Chat Link v1.0 by Jan-Hendrik Willms <tleilax+studip@gmail.com>
+pluginname=Stud.IP Developer Chat Link
+pluginclassname=StudipDeveloperChatLinkPlugin
+origin=UOL
+version=1.0
+description=Integriert einen Link zum IRC-Entwicklerchat #stud.ip auf freenode.
+homepage=http://github.com/tleilax/studip-chatlink
+studipMinVersion=2.0
