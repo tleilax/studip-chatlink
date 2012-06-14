@@ -17,11 +17,11 @@ class StudipDeveloperChatLinkPlugin extends StudIPPlugin implements SystemPlugin
         parent::__construct();
 
         $url = 'http://webchat.freenode.net/?channels=stud.ip&prompt=1';
-        if ($GLOBALS['user']->username) {
+        if ($GLOBALS['user']->username && !$GLOBALS['perm']->have_perm('admin')) {
             $url .= '&nick=' . urlencode($GLOBALS['user']->username);
         }
 
-        $navigation = new Navigation('Chat');
+        $navigation = new Navigation('Entwickler-Chat');
         $navigation->setURL($url);
         Navigation::insertItem('/links/chat', $navigation, 'logout');
     }
