@@ -21,8 +21,10 @@ class StudipDeveloperChatLinkPlugin extends StudIPPlugin implements SystemPlugin
             $url .= '&nick=' . urlencode($GLOBALS['user']->username);
         }
 
+        $position = Navigation::hasItem('/links/logout') ? 'logout' : 'login';
+
         $navigation = new Navigation('Entwickler-Chat');
         $navigation->setURL($url);
-        Navigation::insertItem('/links/chat', $navigation, 'logout');
+        Navigation::insertItem('/links/chat', $navigation, $position);
     }
 }
