@@ -16,10 +16,7 @@ class StudipDeveloperChatLinkPlugin extends StudIPPlugin implements SystemPlugin
     {
         parent::__construct();
 
-        $url = 'http://webchat.freenode.net/?channels=stud.ip&prompt=1';
-        if ($GLOBALS['user']->username && !$GLOBALS['perm']->have_perm('admin')) {
-            $url .= '&nick=' . urlencode($GLOBALS['user']->username);
-        }
+        $url = 'https://matrix.to/#/%23Stud.IP:matrix.org';
 
         $position = Navigation::hasItem('/links/logout') ? 'logout' : 'login';
 
